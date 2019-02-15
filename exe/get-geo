@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'get_geo/cli'
+
+ip = ARGV[0]
+GetGeo::CLI.start(ip)
