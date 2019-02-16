@@ -11,8 +11,8 @@ module Geo
   class Geo
     attr :http_client
 
-    def initialize(http_client = nil)
-      @http_client = http_client || ::Geo::HttpClient
+    def initialize(http_client = ::Geo::HttpClient)
+      @http_client = http_client
     end
 
     def get_data_by_ip(ip = nil)

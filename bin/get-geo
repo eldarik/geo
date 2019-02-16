@@ -4,4 +4,4 @@ require 'geo'
 require 'geo/cli'
 
 ip = ARGV[0]
-Geo::CLI.start(ip, ::Geo::Geo.new(nil))
+Geo::CLI.start(ip, ::Geo::Geo.new)
