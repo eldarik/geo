@@ -1,8 +1,5 @@
 # GetGeo
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/get_geo`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+With GetGeo you can get information about your IP via [http://ip-api.com](http://ip-api.com).
 
 ## Installation
 
@@ -21,8 +18,24 @@ Or install it yourself as:
     $ gem install get_geo
 
 ## Usage
+```
+# argument is ip, if it is not passed, result will be for your current ip
+geo_data = GetGeo.get_data('217.66.24.134')
+geo_data.city # => Kazan’
+geo_data.country # => Russia
+```
 
-TODO: Write usage instructions here
+Gem has cli:
+```
+    $ geo-get 217.66.24.134
+    --- GetGeo ---
+    city: Kazan’
+    country: Russia
+    lat: 55.7897
+    lon: 49.1571
+    query: 217.66.24.134
+```
+
 
 ## Development
 
@@ -32,4 +45,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/get_geo.
+Bug reports and pull requests are welcome on GitHub at https://github.com/eldarik/get_geo.
