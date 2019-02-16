@@ -16,7 +16,6 @@ module Geo
     end
 
     def get_data_by_ip(ip = nil)
-      puts http_client
       url = URI.parse("#{BASE_URL}/#{ip}")
       response = http_client.get(url)
       JSON.parse(response)
