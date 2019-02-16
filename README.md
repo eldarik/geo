@@ -1,12 +1,12 @@
-# GetGeo
-With GetGeo you can get information about your IP via [http://ip-api.com](http://ip-api.com).
+# Geo
+With Geo you can get information about your IP via [http://ip-api.com](http://ip-api.com).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'get_geo'
+gem 'geo'
 ```
 
 And then execute:
@@ -15,12 +15,12 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install get_geo
+    $ gem install geo
 
 ## Usage
 ```
 # argument is ip, if it is not passed, result will be for your current ip
-geo_data = GetGeo.get_data('217.66.24.134')
+geo_data = Geo.get_data_by_ip('217.66.24.134')
 geo_data.city # => Kazan’
 geo_data.country # => Russia
 ```
@@ -28,7 +28,7 @@ geo_data.country # => Russia
 Gem has cli:
 ```
     $ geo-get 217.66.24.134
-    --- GetGeo ---
+    --- Geo ---
     city: Kazan’
     country: Russia
     lat: 55.7897
@@ -45,4 +45,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/eldarik/get_geo.
+Bug reports and pull requests are welcome on GitHub at https://github.com/eldarik/geo.
