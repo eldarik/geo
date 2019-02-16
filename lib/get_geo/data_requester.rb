@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'json'
 
-class GetGeo::DataRequester
+module GetGeo::DataRequester
   BASE_URL = 'http://ip-api.com/json'
 
-  def execute(ip = nil)
+  def self.execute(ip = nil)
     url = BASE_URL
     url = "#{url}/#{ip}" if ip
     response_body = OpenURI.open_uri(url).read

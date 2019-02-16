@@ -9,7 +9,7 @@ module GetGeo
   # Your code goes here...
 
   def self.get_data(ip = nil)
-    data = ::GetGeo::DataRequester.new.execute(ip)
+    data = ::GetGeo::DataRequester.execute(ip)
     ::GetGeo::Data.new(data)
   end
 end
