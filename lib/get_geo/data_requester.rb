@@ -7,6 +7,7 @@ module GetGeo::DataRequester
   def self.execute(ip = nil)
     url = BASE_URL
     url = "#{url}/#{ip}" if ip
+    url = URI.parse(url)
     response_body = OpenURI.open_uri(url).read
     JSON.parse(response_body).transform_keys(&:to_sym)
   end
