@@ -1,5 +1,3 @@
-require 'get_geo/data'
-
 describe GetGeo::Data do
   describe 'class methods' do
     describe '.new' do
