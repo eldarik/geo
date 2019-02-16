@@ -22,7 +22,7 @@ describe GetGeo::Printer do
   end
 
   describe 'instance methods' do
-    describe '.print' do
+    describe '#print' do
       subject { described_class.new(data) }
 
       it 'returns string with formatted data' do
