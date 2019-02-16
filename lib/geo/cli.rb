@@ -2,9 +2,9 @@ require 'geo'
 
 module Geo
   module CLI
-    def self.start(ip, http_client = OpenURI)
-      geo_data = ::Geo.get_data_by_ip(ip, http_client)
-      Geo::Printer::CLI.new(geo_data).print
+    def self.start(ip, geo)
+      geo_data = geo.get_data_by_ip(ip, Geo::HttpClient)
+      puts Geo::Printer.print(geo_data)
     end
   end
 end

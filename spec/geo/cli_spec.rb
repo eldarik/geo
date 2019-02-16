@@ -1,11 +1,11 @@
 require 'geo/cli'
 
 describe Geo::CLI do
-  let!(:http_client) { TestHTTPClient }
+  let!(:geo) { TestGeo }
 
   describe 'class methods' do
     describe '.start' do
-      subject { described_class.start(nil, http_client) }
+      subject { described_class.start(nil, geo) }
 
       it 'print formatted string to stdout' do
         expect { subject }.to output(
