@@ -20,9 +20,9 @@ Or install it yourself as:
 ## Usage
 ```
 # argument is ip, if it is not passed, result will be for your current ip
-geo_data = Geo.get_data_by_ip('217.66.24.134')
-geo_data.city # => Kazan’
-geo_data.country # => Russia
+data = Geo.get_data_by_ip('217.66.24.134')
+data['city'] # => Kazan’
+data['country'] # => Russia
 ```
 
 Gem has cli:
