@@ -19,7 +19,7 @@ describe Geo do
     let!(:ip) { '123.123.123.123' }
 
     it_is_asserted_by do
-      described_class.get_data(ip, http_client).city == expected.city
+      described_class.get_data_by_ip(ip, http_client).city == expected.city
     end
   end
 end

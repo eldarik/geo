@@ -9,7 +9,7 @@ require 'json'
 module Geo
   class Error < StandardError; end
 
-  def self.get_data(ip = nil, http_client = OpenURI)
+  def self.get_data_by_ip(ip = nil, http_client = OpenURI)
     data = ::Geo::DataRequester.execute(ip, http_client)
     ::Geo::Data.new(data)
   end
