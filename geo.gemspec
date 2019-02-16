@@ -1,17 +1,17 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "get_geo/version"
+require "geo/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "get_geo"
-  spec.version       = GetGeo::VERSION
+  spec.name          = "geo"
+  spec.version       = Geo::VERSION
   spec.authors       = ["Eldar Iskhakov"]
   spec.email         = ["iskhakov.eldar95@gmail.com"]
 
-  spec.summary       = 'GetGeo For workshop OOP'
-  spec.description   = 'GetGeo For workshop OOP'
-  spec.homepage      = 'https://github.com/eldarik/get_geo'
+  spec.summary       = 'Geo For workshop OOP'
+  spec.description   = 'Geo For workshop OOP'
+  spec.homepage      = 'https://github.com/eldarik/geo'
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.

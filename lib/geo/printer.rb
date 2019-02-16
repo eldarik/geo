@@ -1,4 +1,4 @@
-class GetGeo::Printer
+class Geo::Printer
   attr_reader :data, :output_string
 
   def initialize(data)
@@ -14,7 +14,7 @@ class GetGeo::Printer
   def set_output_string
     @output_string =
       <<~HEREDOC
-        --- GetGeo ---
+        --- Geo ---
         #{item_line('city', data.city)}
         #{item_line('country', data.country)}
         #{item_line('lat', data.lat)}

@@ -1,4 +1,4 @@
-class GetGeo::Data
+class Geo::Data
   attr_reader :city, :country, :lat, :lon, :query
 
   def initialize(args)

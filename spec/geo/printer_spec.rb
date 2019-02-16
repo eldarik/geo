@@ -1,6 +1,6 @@
-describe GetGeo::Printer do
+describe Geo::Printer do
   let!(:data) do
-    GetGeo::Data.new(
+    Geo::Data.new(
       {
         city: 'City',
         country: 'Country',
@@ -27,7 +27,7 @@ describe GetGeo::Printer do
       before  do
         @result =
           <<~HEREDOC
-            --- GetGeo ---
+            --- Geo ---
             city: #{data.city}
             country: #{data.country}
             lat: #{data.lat}

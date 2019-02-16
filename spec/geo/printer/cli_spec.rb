@@ -1,8 +1,6 @@
-require 'get_geo/cli'
-
-describe GetGeo::CLI do
+describe Geo::Printer::CLI do
   let!(:data) do
-    GetGeo::Data.new(
+    Geo::Data.new(
       {
         city: 'City',
         country: 'Country',
@@ -13,17 +11,14 @@ describe GetGeo::CLI do
     )
   end
 
-  describe 'class methods' do
-    describe '.start' do
-      subject { described_class.start(nil) }
-      before do
-        expect(GetGeo).to receive(:get_data).and_return(data)
-      end
+  describe 'instance methods' do
+    describe '#print' do
+      subject { described_class.new(data) }
 
       it 'print formatted string to stdout' do
-        expect { subject }.to output(
+        expect { subject.print }.to output(
           <<~HEREDOC
-            --- GetGeo ---
+            --- Geo ---
             city: #{data.city}
             country: #{data.country}
             lat: #{data.lat}

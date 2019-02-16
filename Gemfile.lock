@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    get_geo (0.1.2)
+    geo (0.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -71,7 +71,7 @@ DEPENDENCIES
   aruba
   bundler (~> 1.17)
   cucumber
-  get_geo!
+  geo!
   pry
   rake (~> 10.0)
   rspec (~> 3.0)

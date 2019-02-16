@@ -1,5 +1,6 @@
 require "bundler/setup"
-require "get_geo"
+require "geo"
+require "fixtures/test_http_client"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

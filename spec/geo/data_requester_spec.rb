@@ -1,11 +1,8 @@
-describe GetGeo do
-  it do
-    is_asserted_by { GetGeo::VERSION != nil }
-  end
-
+describe Geo::DataRequester do
+  let!(:http_client) { TestHTTPClient }
   describe 'class methods' do
-    let!(:response) { double }
-    let!(:data) do
+    let!(:ip) { '123.123.123.123' }
+    let!(:expected) do
       {
         "as": "AS4134 No.31,Jin-rong Street",
         "city": "Guangzhou",
@@ -23,12 +20,8 @@ describe GetGeo do
         "zip": ""
       }
     end
-    let!(:response_data) { data.to_json }
-    before do
-      expect(OpenURI).to receive(:open_uri).and_return(response)
-      expect(response).to receive(:read).and_return(response_data)
+    describe '.execute' do
+      it_is_asserted_by { described_class.execute(ip, http_client)  == expected }
     end
-
-    it_is_asserted_by { described_class.get_data.class == GetGeo::Data }
   end
 end

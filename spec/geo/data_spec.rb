@@ -1,4 +1,4 @@
-describe GetGeo::Data do
+describe Geo::Data do
   describe 'class methods' do
     describe '.new' do
       let!(:args) { { city: 'City' } }
