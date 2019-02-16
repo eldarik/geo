@@ -1,6 +1,6 @@
 describe GetGeo do
-  it "has a version number" do
-    expect(GetGeo::VERSION).not_to be nil
+  it do
+    is_asserted_by { GetGeo::VERSION != nil }
   end
 
   describe 'class methods' do
@@ -28,11 +28,7 @@ describe GetGeo do
       expect(OpenURI).to receive(:open_uri).and_return(response)
       expect(response).to receive(:read).and_return(response_data)
     end
-    subject { described_class.get_data }
 
-    it 'returns geo data object' do
-      expect(subject).not_to be_nil
-      expect(subject).to be_a(GetGeo::Data)
-    end
+    it_is_asserted_by { described_class.get_data.class == GetGeo::Data }
   end
 end

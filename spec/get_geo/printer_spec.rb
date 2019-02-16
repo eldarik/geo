@@ -16,7 +16,7 @@ describe GetGeo::Printer do
       subject { described_class.new(data) }
 
       it 'initialize new object' do
-        expect(subject).not_to be_nil
+        is_asserted_by { subject != nil }
       end
     end
   end
@@ -24,9 +24,8 @@ describe GetGeo::Printer do
   describe 'instance methods' do
     describe '#print' do
       subject { described_class.new(data) }
-
-      it 'returns string with formatted data' do
-        expect(subject.print).to eq(
+      before  do
+        @result =
           <<~HEREDOC
             --- GetGeo ---
             city: #{data.city}
@@ -35,7 +34,10 @@ describe GetGeo::Printer do
             lon: #{data.lon}
             query: #{data.query}
           HEREDOC
-        )
+      end
+
+      it 'returns formatted string' do
+        is_asserted_by { subject.print == @result }
       end
     end
   end

@@ -4,9 +4,7 @@ describe GetGeo::Data do
       let!(:args) { { city: 'City' } }
       subject { described_class.new(args) }
 
-      it 'initialize new object' do
-        expect(subject).not_to be_nil
-      end
+      it_is_asserted_by { subject != nil }
     end
   end
 
@@ -23,23 +21,23 @@ describe GetGeo::Data do
     subject { described_class.new(args) }
 
     describe 'has city' do
-      it { expect(subject.city).to eq(args[:city]) }
+      it_is_asserted_by { subject.city == args[:city] }
     end
 
     describe 'has country' do
-      it { expect(subject.country).to eq(args[:country]) }
+      it_is_asserted_by { subject.country == args[:country] }
     end
 
     describe 'has lat' do
-      it { expect(subject.lat).to eq(args[:lat]) }
+      it_is_asserted_by { subject.lat == args[:lat] }
     end
 
     describe 'has lon' do
-      it { expect(subject.lon).to eq(args[:lon]) }
+      it_is_asserted_by { subject.lon == args[:lon] }
     end
 
     describe 'has query' do
-      it { expect(subject.query).to eq(args[:query]) }
+      it_is_asserted_by { subject.query == args[:query] }
     end
   end
 end

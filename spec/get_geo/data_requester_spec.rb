@@ -1,16 +1,6 @@
 describe GetGeo::DataRequester do
   describe 'class methods' do
-    describe '.new' do
-      subject { described_class.new }
-
-      it 'initialize new object' do
-        expect(subject).not_to be_nil
-      end
-    end
-  end
-
-  describe 'instance methods' do
-    describe '#execute' do
+    describe '.execute' do
       let!(:response) { double }
       let!(:data) do
         {
@@ -36,11 +26,7 @@ describe GetGeo::DataRequester do
         expect(response).to receive(:read).and_return(response_data)
       end
 
-      subject { described_class.new.execute }
-
-      it 'returns hash with data' do
-        expect(subject).not_to be_nil
-      end
+      it_is_asserted_by { described_class.execute == data }
     end
   end
 end
