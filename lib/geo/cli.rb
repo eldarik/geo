@@ -1,4 +1,5 @@
 require 'geo'
+require 'geo/printer'
 
 module Geo
   module CLI

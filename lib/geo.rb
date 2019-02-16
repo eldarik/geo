@@ -1,5 +1,4 @@
 require 'geo/version'
-require 'geo/printer'
 require 'geo/http_client'
 require 'open-uri'
 require 'json'
