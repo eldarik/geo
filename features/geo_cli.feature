@@ -1,4 +1,4 @@
-Feature: tGeoCLI
+Feature: GeoCLI
   Scenario: get geo datum for ip
     When I run `get-geo`
     Then the output should contain "Geo"
