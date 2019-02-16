@@ -20,7 +20,7 @@ Or install it yourself as:
 ## Usage
 ```
 # argument is ip, if it is not passed, result will be for your current ip
-data = Geo.get_data_by_ip('217.66.24.134')
+data = Geo::Geo.new.get_data_by_ip('217.66.24.134')
 data['city'] # => Kazan’
 data['country'] # => Russia
 ```

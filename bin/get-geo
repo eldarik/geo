@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require "bundler/setup"
+require 'geo'
 require 'geo/cli'
 
 ip = ARGV[0]
-Geo::CLI.start(ip, Geo)
+Geo::CLI.start(ip, ::Geo::Geo.new(nil))

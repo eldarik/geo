@@ -1,5 +1,8 @@
-module TestGeo
-  def self.get_data_by_ip(ip, http_client)
+class TestGeo
+  def new(http_client)
+  end
+
+  def get_data_by_ip(ip)
     {
       "as" => "AS4134 No.31,Jin-rong Street",
       "city" => "Guangzhou",

@@ -1,7 +1,7 @@
 require 'geo/cli'
 
 describe Geo::CLI do
-  let!(:geo) { TestGeo }
+  let!(:geo) { TestGeo.new }
 
   describe 'class methods' do
     describe '.start' do
