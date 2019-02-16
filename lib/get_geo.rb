@@ -1,6 +1,7 @@
 require 'get_geo/version'
 require 'get_geo/data'
 require 'get_geo/printer'
+require 'get_geo/printer/cli'
 
 module GetGeo
   class Error < StandardError; end
